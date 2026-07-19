@@ -1,10 +1,9 @@
 import OpenAI from "openai";
 import { useState } from "react";
 
-const token = '';
+const token = import.meta.env.VITE_TOKEN;
 const endpoint = "https://models.github.ai/inference";
 const modelName = "openai/gpt-4o";
-
 
 // Initialize the client outside the component so it doesn't recreate on every render
 const client = new OpenAI({ 
